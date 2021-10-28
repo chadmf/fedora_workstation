@@ -1,0 +1,10 @@
+---
+- name: get openshift client
+  get_url:
+    url='https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/oc/latest/linux/oc.tar.gz'
+    dest='/tmp/oc.tar.gz'
+
+- name: untar openshift client
+  unarchive:
+    src: '/tmp/oc.tar.gz'
+    dest: '/usr/bin/'

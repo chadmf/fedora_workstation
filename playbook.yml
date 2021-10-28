@@ -1,0 +1,11 @@
+---
+- name: Configure Fedora Workstation
+  hosts: localhost
+  gather_facts: False
+  become: yes
+  roles:
+    - flatpak
+    - vscode
+    - fedora_workstation
+    - openshift
+    - yubi_u2f

@@ -1,0 +1,31 @@
+---
+- name: Add the flathub flatpak repository remote to the user installation
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    
+- name: Install Signal flatpak
+  flatpak:
+    name: org.signal.Signal
+    state: present
+
+- name: Install Slack flatpak
+  flatpak:
+    name: com.slack.Slack
+    state: present
+
+- name: Install Zoom flatpak
+  flatpak:
+    name: us.zoom.Zoom
+    state: present
+
+- name: Install Github Desktop flatpak
+  flatpak:
+    name: io.github.shiftey.Desktop
+    state: present
+
+- name: Install BlueJeans Desktop flatpak
+  flatpak:
+    name: com.bluejeans.BlueJeans
+    state: present

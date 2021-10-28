@@ -1,0 +1,13 @@
+---
+- name: Install gnome-tweaks, gimp, plank 
+  yum:
+    name: 
+      -  'gnome-tweaks'
+      -  'gnome-extensions-app'
+      -  'gimp'
+      -  'plank'
+      -  'gnome-shell-extension-apps-menu.noarch'
+      -  'gnome-shell-extension-dash-to-dock.noarch'
+      -  'gnome-tweaks'
+      -  'gnome-themes-extra'
+    state: present
