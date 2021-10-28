@@ -1,13 +1,21 @@
 ---
-- name: Install gnome-tweaks, gimp, plank 
+- name: Install gnome-tweaks, gimp, plank, golang, virt-manager
   yum:
     name: 
       -  'gnome-tweaks'
       -  'gnome-extensions-app'
+      -  'golang'
       -  'gimp'
       -  'plank'
       -  'gnome-shell-extension-apps-menu.noarch'
       -  'gnome-shell-extension-dash-to-dock.noarch'
       -  'gnome-tweaks'
       -  'gnome-themes-extra'
+      -  'virt-manager'
+      -  'tuned'
     state: present
+
+- name: enable tuned
+  service: 
+    name: tuned
+    state: started
