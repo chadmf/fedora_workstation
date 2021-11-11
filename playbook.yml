@@ -5,7 +5,9 @@
   become: yes
   roles:
     - flatpak
-    - vscode
     - fedora_workstation
+    - github
     - openshift
     - yubi_u2f
+    - vscode
+

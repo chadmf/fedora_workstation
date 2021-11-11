@@ -19,3 +19,4 @@
   service: 
     name: tuned
     state: started
+  notify: tuned-handler
