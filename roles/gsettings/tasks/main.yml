@@ -1,5 +1,5 @@
 ---
-# tasks file for gesettings
+# tasks file for gsettings
 - name: add japanese language to keyboard for gnome
   command: gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('ibus', 'anthy')]"
   become: false
