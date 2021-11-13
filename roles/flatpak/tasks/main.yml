@@ -29,3 +29,8 @@
   flatpak:
     name: com.bluejeans.BlueJeans
     state: present
+
+- name: Install Discord
+  flatpak:
+    name: com.discordapp.Discord
+    state: present
