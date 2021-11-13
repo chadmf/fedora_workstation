@@ -2,6 +2,7 @@
 - name: Install gnome-tweaks, gimp, plank, golang, virt-manager
   yum:
     name: 
+      -  'conky'
       -  'gnome-tweaks'
       -  'gnome-extensions-app'
       -  'golang'
