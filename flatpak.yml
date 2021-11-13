@@ -4,4 +4,4 @@
   gather_facts: False
   become: yes
   roles:
-    - flatpak.yml
+    - flatpak
