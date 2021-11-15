@@ -1,10 +1,4 @@
 ---
-- name: Install vscode
-  flatpak:
-    name: 'com.visualstudio.code'
-    state: present
-    method: user
-
 - name: add vscode rpm key
   rpm_key:
     state: present
