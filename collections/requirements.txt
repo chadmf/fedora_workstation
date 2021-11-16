@@ -1,0 +1,5 @@
+---
+collections:
+# With just the collection name
+- ansible.builtin.pip 
+- community.general.flatpak

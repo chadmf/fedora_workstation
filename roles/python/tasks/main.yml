@@ -1,6 +1,6 @@
 ---
 # tasks file for python
-- pip:
+- ansible.builtin.pip:
     name: 
     - ansible-builder
     - ansible-navigator
