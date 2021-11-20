@@ -6,7 +6,8 @@
     description: github cli repository
     baseurl: https://cli.github.com/packages/rpm
     enabled: yes
-    gpgcheck: false
+    gpgkey: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+    gpgcheck: true
 
 - name: install github cli
   ansible.builtin.dnf:
