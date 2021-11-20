@@ -22,3 +22,8 @@
     name: tuned
     state: started
   notify: tuned-handler
+
+- name: Remove opensc to get rid of Firefox prompting for password
+  ansible.builtin.yum:
+    name: opensc
+    state: absent
