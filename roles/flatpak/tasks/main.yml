@@ -1,36 +1,36 @@
 ---
-- name: Add the flathub flatpak repository remote to the user installation
-  flatpak_remote:
+- name: Add the flathub community.general.flatpak repository remote to the user installation
+  community.general.flatpak_remote:
     name: flathub
     state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.community.general.flatpakrepo
     
-- name: Install Signal flatpak
-  flatpak:
+- name: Install Signal community.general.flatpak
+  community.general.flatpak:
     name: org.signal.Signal
     state: present
 
-- name: Install Slack flatpak
-  flatpak:
+- name: Install Slack community.general.flatpak
+  community.general.flatpak:
     name: com.slack.Slack
     state: present
 
-- name: Install Zoom flatpak
-  flatpak:
+- name: Install Zoom community.general.flatpak
+  community.general.flatpak:
     name: us.zoom.Zoom
     state: present
 
-- name: Install Github Desktop flatpak
-  flatpak:
+- name: Install Github Desktop community.general.flatpak
+  community.general.flatpak:
     name: io.github.shiftey.Desktop
     state: present
 
-- name: Install BlueJeans Desktop flatpak
-  flatpak:
+- name: Install BlueJeans Desktop community.general.flatpak
+  community.general.flatpak:
     name: com.bluejeans.BlueJeans
     state: present
 
 - name: Install Discord
-  flatpak:
+  community.general.flatpak:
     name: com.discordapp.Discord
     state: present

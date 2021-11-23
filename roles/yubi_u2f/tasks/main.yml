@@ -2,25 +2,25 @@
 # tasks file for yubi_u2f
 
 - name: Install yubi utils
-  yum:
+  ansible.builtin.yum:
     name: 
       -  'pamu2fcfg'
       -  'pam-u2f'
     state: present
 
 - name: Check that the yubi mappings file exists
-  stat:
+  ansible.builtin.stat:
     path: /etc/yubikey_mappings
   register: stat_result
 
 - name: Create the yubikey_mappings file, if it doesn't exist already
-  file:
+  ansible.builtin.file:
     path: /etc/yubikey_mappings
     state: touch
   when: not stat_result.stat.exists
 
 - name: create pam.d rule
-  pamd:
+  ansible.builtin.pamd:
     name: gdm-password
     type: auth
     control: required
