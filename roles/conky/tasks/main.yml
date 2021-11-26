@@ -1,0 +1,12 @@
+---
+- name: Install conky and other prerequisites for Automatik conk profile
+  ansible.builtin.yum:
+    name: 
+      -  'conky'
+      -  'vim-common'
+      -  'redhat-lsb-core'
+
+- name: Check that the ./conky/Automatik exists
+  stat:
+    path: ~/.conky/AutomatiK
+  register: stat_result

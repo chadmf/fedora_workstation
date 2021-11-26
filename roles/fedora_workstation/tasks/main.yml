@@ -2,7 +2,6 @@
 - name: Install gnome-tweaks, gimp, plank, golang, virt-manager
   ansible.builtin.yum:
     name: 
-      -  'conky'
       -  'gnome-tweaks'
       -  'gnome-extensions-app'
       -  'golang'

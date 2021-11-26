@@ -1,0 +1,8 @@
+---
+# tasks file for music
+- name: Install ardour6
+  ansible.builtin.yum:
+    name: 
+      -  'ardour6'
+      -  'hydrogen'
+      -  'a2jmidid'
