@@ -6,3 +6,11 @@
       -  'ardour6'
       -  'hydrogen'
       -  'a2jmidid'
+
+- name: Add or modify memlock, both soft and hard, limit for the user {{ lookup('env', 'USER') }} with a comment
+  community.general.pam_limits:
+    domain: "{{ lookup('env', 'USER') }}"
+    limit_type: '-'
+    limit_item: memlock
+    value: unlimited
+    comment: unlimited memory lock for {{ lookup('env', 'USER') }}
