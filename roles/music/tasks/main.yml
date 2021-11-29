@@ -1,11 +1,12 @@
 ---
 # tasks file for music
-- name: Install ardour6
+- name: Install ardour6, hydrogen, a2jmidid and qjackctl
   ansible.builtin.yum:
     name: 
       -  'ardour6'
       -  'hydrogen'
       -  'a2jmidid'
+      -  'qjackctl'
 
 - name: Add or modify memlock, both soft and hard, limit for the user {{ lookup('env', 'USER') }} with a comment
   community.general.pam_limits:
