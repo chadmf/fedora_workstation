@@ -1,0 +1,11 @@
+---
+- name: Install snap
+  ansible.builtin.yum:
+    name: 
+      -  'snapd'
+
+- name: Install ramboxpro snap
+  community.general.snap:
+    name:
+      - ramboxpro
+    classic: yes
