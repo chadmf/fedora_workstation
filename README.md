@@ -2,6 +2,12 @@
 
 ## How to use
 
+Install collections needed:
+
+```shell
+ansible-galaxy collection install -r requirements.yml
+```
+
 To run all playbooks:
 
 ```shell

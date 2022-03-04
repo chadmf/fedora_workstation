@@ -3,7 +3,7 @@
   community.general.flatpak_remote:
     name: flathub
     state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.community.general.flatpakrepo
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
     
 - name: Install Signal community.general.flatpak
   community.general.flatpak:
