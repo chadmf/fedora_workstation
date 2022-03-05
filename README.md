@@ -29,6 +29,9 @@ ansible-playbook flatpak.yml
 | openshift          | gets latest oc client                                                                             |
 | vscode             | configures vscode repo                                                                            |
 | yubi_u2f           | configures everything you need for universal 2 factor EXCEPT creating the file /etc/yubi_mappings |
+| conky              | requires a var set for {{ local_user_name }} otherwise it will use the default of my username     |
+| github cli         | installs github cli and desktop                                                                   |
+| vfio               | Stubs out nvidia card so you can use it via vfio for gpu passthrough to a vm or container         |
 
 ---
 
