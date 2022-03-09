@@ -1,7 +1,0 @@
----
-- name: install snaps
-  hosts: localhost
-  gather_facts: False
-  become: yes
-  roles:
-    - snap

@@ -1,7 +1,0 @@
----
-# tasks file for python
-- ansible.builtin.pip:
-    name: 
-    - ansible-builder
-    - ansible-navigator
-  become: false

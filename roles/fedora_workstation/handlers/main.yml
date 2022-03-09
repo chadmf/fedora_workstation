@@ -1,3 +1,0 @@
----
-- name: tuned-handler
-  shell: tuned-adm profile powersave
