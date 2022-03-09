@@ -1,0 +1,8 @@
+---
+# tasks file for rambox
+
+- name: Install rambox from download url
+  yum:
+    name: https://rambox.app/api/download?os=linux&package=rpm
+    state: present
+    disable_gpg_check: true

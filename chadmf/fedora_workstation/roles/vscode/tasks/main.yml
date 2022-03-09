@@ -1,0 +1,19 @@
+---
+- name: add vscode rpm key
+  ansible.builtin.rpm_key:
+    state: present
+    key: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Add vscode repositories 
+  ansible.builtin.yum_repository:
+    name: vscode
+    description: vscode repo
+    file: vscode_repo
+    baseurl: https://packages.microsoft.com/yumrepos/vscode
+    gpgcheck: yes
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+
+- name: Install vscode
+  ansible.builtin.yum:
+    name: 'code'
+    state: present

@@ -1,0 +1,15 @@
+---
+# tasks file for github
+- name: add github-cli repository
+  ansible.builtin.yum_repository:
+    name: github-cli
+    description: github cli repository
+    baseurl: https://cli.github.com/packages/rpm
+    enabled: yes
+    gpgkey: https://cli.github.com/packages/githubcli-archive-keyring.gpg
+    gpgcheck: true
+
+- name: install github cli
+  ansible.builtin.dnf:
+    name: gh
+    state: present

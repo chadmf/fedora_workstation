@@ -1,0 +1,7 @@
+---
+- name: Configure conky for Fedora Workstation
+  hosts: localhost
+  gather_facts: False
+  become: yes
+  roles:
+    - conky

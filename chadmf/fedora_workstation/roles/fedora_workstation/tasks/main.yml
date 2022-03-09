@@ -1,0 +1,28 @@
+---
+- name: Install gnome-tweaks, gimp, plank, golang, virt-manager
+  ansible.builtin.yum:
+    name: 
+      -  'gnome-tweaks'
+      -  'gnome-extensions-app'
+      -  'golang'
+      -  'gimp'
+      -  'plank'
+      -  'gnome-shell-extension-apps-menu.noarch'
+      -  'gnome-shell-extension-dash-to-dock.noarch'
+      -  'gnome-tweaks'
+      -  'gnome-themes-extra'
+      -  'python3-pip'
+      -  'virt-manager'
+      -  'tuned'
+    state: present
+
+- name: enable tuned
+  ansible.builtin.service: 
+    name: tuned
+    state: started
+  notify: tuned-handler
+
+- name: Remove opensc to get rid of Firefox prompting for password
+  ansible.builtin.yum:
+    name: opensc
+    state: absent
