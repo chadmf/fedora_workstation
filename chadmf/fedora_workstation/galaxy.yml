@@ -45,7 +45,7 @@ tags: []
 dependencies: {}
 
 # The URL of the originating SCM repository
-repository: http://example.com/repository
+repository: http://github.com/chadmf/fedora_workstation
 
 # The URL to any online docs
 documentation: http://docs.example.com
