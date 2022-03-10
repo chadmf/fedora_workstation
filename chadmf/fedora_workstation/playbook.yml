@@ -1,7 +1,7 @@
 ---
 - name: Configure Fedora Workstation
   hosts: localhost
-  gather_facts: False
+  gather_facts: True
   become: yes
   roles:
     - conky
