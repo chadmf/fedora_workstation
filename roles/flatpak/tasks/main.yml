@@ -1,36 +1,15 @@
 ---
 - name: Add the flathub community.general.flatpak repository remote to the user installation
-  community.general.flatpak_remote:
-    name: flathub
-    state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  ansible.builtin.shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     
-- name: Install Signal community.general.flatpak
+- name: Install signal, telegram, zoom, githubcli bluejeans and discord in a loop
   community.general.flatpak:
-    name: org.signal.Signal
-    state: present
-
-- name: Install Slack community.general.flatpak
-  community.general.flatpak:
-    name: com.slack.Slack
-    state: present
-
-- name: Install Zoom community.general.flatpak
-  community.general.flatpak:
-    name: us.zoom.Zoom
-    state: present
-
-- name: Install Github Desktop community.general.flatpak
-  community.general.flatpak:
-    name: io.github.shiftey.Desktop
-    state: present
-
-- name: Install BlueJeans Desktop community.general.flatpak
-  community.general.flatpak:
-    name: com.bluejeans.BlueJeans
-    state: present
-
-- name: Install Discord
-  community.general.flatpak:
-    name: com.discordapp.Discord
+    name: 
+      - org.signal.Signal
+      - org.telegram.desktop
+      - us.zoom.Zoom
+      - io.github.shiftey.Desktop
+      - com.bluejeans.BlueJeans
+      - com.discordapp.Discord
+      - org.chromium.Chromium
     state: present

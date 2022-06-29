@@ -4,9 +4,7 @@
     name: 
       -  'gnome-tweaks'
       -  'gnome-extensions-app'
-      -  'golang'
       -  'gimp'
-      -  'plank'
       -  'gnome-shell-extension-apps-menu.noarch'
       -  'gnome-shell-extension-dash-to-dock.noarch'
       -  'gnome-tweaks'
