@@ -11,6 +11,7 @@
       - io.github.shiftey.Desktop
       - com.bluejeans.BlueJeans
       - com.discordapp.Discord
-      - com.google.Chrome
+      - com.spotify.Client
       - com.microsoft.Teams
+      - com.spotify.Client
     state: present
