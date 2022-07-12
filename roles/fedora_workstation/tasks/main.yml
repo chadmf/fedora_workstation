@@ -1,5 +1,5 @@
 ---
-- name: Install gnome-tweaks, gimp, plank, golang, virt-manager, gogle=chrome, ffmpeg
+- name: Install gnome-tweaks, gimp, plank, golang, virt-manager, google-chrome, ffmpeg, helm, pavucontrol
   ansible.builtin.yum:
     name: 
       -  'gnome-tweaks'
@@ -14,6 +14,8 @@
       -  'tuned'
       -  'ffmpeg'
       -  'google-chrome-stable'
+      -  'helm'
+      -  'pavucontrol'
     state: present
 
 - name: enable tuned
