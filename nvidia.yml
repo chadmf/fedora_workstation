@@ -1,0 +1,7 @@
+---
+- name: Configure Openshift client on Fedora Workstation
+  hosts: localhost
+  gather_facts: False
+  become: yes
+  roles:
+    - nvidia

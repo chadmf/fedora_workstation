@@ -1,5 +1,17 @@
 ---
-- name: Install gnome-tweaks, gimp, plank, golang, virt-manager, google-chrome, ffmpeg, helm, pavucontrol
+- name: Enable the RPM Fusion repository
+  ansible.builtin.yum:
+    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
+    state: present
+    disable_gpg_check: yes
+
+- name: Enable the RPM Fusion repository
+  ansible.builtin.yum:
+    name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm"
+    state: present
+    disable_gpg_check: yes
+
+- name: Install gnome-tweaks, gimp, plank, golang, virt-manager, ffmpeg, helm
   ansible.builtin.yum:
     name: 
       -  'gnome-tweaks'
@@ -13,9 +25,7 @@
       -  'virt-manager'
       -  'tuned'
       -  'ffmpeg'
-      -  'google-chrome-stable'
       -  'helm'
-      -  'pavucontrol'
     state: present
 
 - name: enable tuned
@@ -28,3 +38,29 @@
   ansible.builtin.yum:
     name: opensc
     state: absent
+
+- name: Add google chrome signing key
+  ansible.builtin.rpm_key:
+    key: https://dl.google.com/linux/linux_signing_key.pub
+    state: present
+
+- name: Add google-chrome repository 
+  ansible.builtin.yum_repository:
+    name: google-chrome
+    description: google-chrome repository
+    baseurl: http://dl.google.com/linux/chrome/rpm/stable/x86_64
+    enabled: true
+    gpgcheck: true
+    gpgkey: https://dl.google.com/linux/linux_signing_key.pub
+
+- name: Install google-chrome-stable
+  ansible.builtin.yum:
+    name: "google-chrome-stable"
+    state: latest 
+    update_cache: true
+
+- name: Install rambox
+  ansible.builtin.yum:
+    name: "https://github.com/ramboxapp/download/releases/download/v2.0.6/Rambox-2.0.6-linux-x64.rpm"
+    state: latest 
+    disable_gpg_check: true
