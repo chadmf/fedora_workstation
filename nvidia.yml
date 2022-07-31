@@ -1,5 +1,5 @@
 ---
-- name: Configure Openshift client on Fedora Workstation
+- name: Configure nvidia proprietary drivers from rpmfusion on Fedora Workstation
   hosts: localhost
   gather_facts: False
   become: yes

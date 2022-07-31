@@ -14,18 +14,18 @@
 - name: Install gnome-tweaks, gimp, plank, golang, virt-manager, ffmpeg, helm
   ansible.builtin.yum:
     name: 
-      -  'gnome-tweaks'
-      -  'gnome-extensions-app'
-      -  'gimp'
-      -  'gnome-shell-extension-apps-menu.noarch'
-      -  'gnome-shell-extension-dash-to-dock.noarch'
-      -  'gnome-tweaks'
-      -  'gnome-themes-extra'
-      -  'python3-pip'
-      -  'virt-manager'
-      -  'tuned'
-      -  'ffmpeg'
-      -  'helm'
+      - 'gnome-tweaks'
+      - 'gnome-extensions-app'
+      - 'gimp'
+      - 'gnome-shell-extension-apps-menu.noarch'
+      - 'gnome-shell-extension-dash-to-dock.noarch'
+      - 'gnome-tweaks'
+      - 'gnome-themes-extra'
+      - 'python3-pip'
+      - 'virt-manager'
+      - 'tuned'
+      - 'ffmpeg'
+      - 'helm'
     state: present
 
 - name: enable tuned
