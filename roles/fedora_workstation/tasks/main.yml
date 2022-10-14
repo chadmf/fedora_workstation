@@ -16,7 +16,6 @@
     name: 
       - 'gnome-tweaks'
       - 'gnome-extensions-app'
-      - 'gimp'
       - 'gnome-shell-extension-apps-menu.noarch'
       - 'gnome-shell-extension-dash-to-dock.noarch'
       - 'gnome-tweaks'

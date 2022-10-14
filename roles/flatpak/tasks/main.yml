@@ -14,4 +14,5 @@
       - com.spotify.Client
       - com.microsoft.Teams
       - com.spotify.Client
+      - org.glimpse_editor.Glimpse
     state: present

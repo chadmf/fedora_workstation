@@ -1,0 +1,12 @@
+---
+- name: Configure Fedora Workstation
+  hosts: localhost
+  gather_facts: True
+  become: True
+  roles:
+    - role: petermosmans.customize-gnome
+  vars:
+    gnome_extensions:
+      - id: 307
+        enable: yes
+
