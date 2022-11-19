@@ -25,6 +25,7 @@
       - 'tuned'
       - 'ffmpeg'
       - 'helm'
+      - 'python3-virtualenvwrapper'
     state: present
 
 - name: enable tuned
