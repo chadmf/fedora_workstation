@@ -11,7 +11,7 @@
     state: present
     disable_gpg_check: yes
 
-- name: Install gnome-tweaks, gimp, plank, golang, virt-manager, ffmpeg, helm
+- name: Install gnome-tweaks, gimp, plank, virt-manager, ffmpeg, helm
   ansible.builtin.yum:
     name: 
       - 'gnome-tweaks'
@@ -26,6 +26,7 @@
       - 'ffmpeg'
       - 'helm'
       - 'python3-virtualenvwrapper'
+      - 'python3-ansible-lint'
     state: present
 
 - name: enable tuned
@@ -61,6 +62,6 @@
 
 - name: Install rambox
   ansible.builtin.yum:
-    name: "https://github.com/ramboxapp/download/releases/download/v2.0.9/Rambox-2.0.9-linux-x64.rpm"
+    name: "https://github.com/ramboxapp/download/releases/download/v2.0.10/Rambox-2.0.10-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
