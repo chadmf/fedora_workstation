@@ -62,6 +62,6 @@
 
 - name: Install rambox
   ansible.builtin.yum:
-    name: "https://github.com/ramboxapp/download/releases/download/v2.0.10/Rambox-2.0.10-linux-x64.rpm"
+    name: "https://github.com/ramboxapp/download/releases/download/v2.1.0/Rambox-2.1.0-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
