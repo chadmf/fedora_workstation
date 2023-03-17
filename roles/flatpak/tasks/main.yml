@@ -16,4 +16,5 @@
       - com.spotify.Client
       - org.glimpse_editor.Glimpse
       - com.slack.Slack
+      - io.podman_desktop.PodmanDesktop
     state: present

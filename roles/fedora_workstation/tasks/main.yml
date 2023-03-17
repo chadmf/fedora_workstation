@@ -65,3 +65,4 @@
     name: "https://github.com/ramboxapp/download/releases/download/v2.1.0/Rambox-2.1.0-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
+
