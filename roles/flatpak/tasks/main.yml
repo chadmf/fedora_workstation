@@ -12,9 +12,8 @@
       - com.bluejeans.BlueJeans
       - com.discordapp.Discord
       - com.spotify.Client
-      - com.microsoft.Teams
-      - com.spotify.Client
       - org.glimpse_editor.Glimpse
       - com.slack.Slack
       - io.podman_desktop.PodmanDesktop
+      - com.jetbrains.PyCharm-Community
     state: present
