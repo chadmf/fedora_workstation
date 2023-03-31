@@ -27,6 +27,7 @@
       - 'helm'
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
+      - '@KDE Plasma Workspaces'
     state: present
 
 - name: enable tuned
