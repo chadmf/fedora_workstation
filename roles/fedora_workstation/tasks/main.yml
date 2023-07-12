@@ -1,40 +1,40 @@
 ---
 - name: Enable the RPM Fusion repository
-  ansible.builtin.yum:
-    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
-    state: present
-    disable_gpg_check: yes
+ ansible.builtin.yum:
+   name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
+   state: present
+   disable_gpg_check: yes
 
 - name: Enable the RPM Fusion repository
-  ansible.builtin.yum:
-    name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm"
-    state: present
-    disable_gpg_check: yes
+ ansible.builtin.yum:
+   name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm"
+   state: present
+   disable_gpg_check: yes
 
 - name: Install gnome-tweaks, gimp, plank, virt-manager, ffmpeg, helm
-  ansible.builtin.yum:
-    name: 
-      - 'gnome-tweaks'
-      - 'gnome-extensions-app'
-      - 'gnome-shell-extension-apps-menu.noarch'
-      - 'gnome-shell-extension-dash-to-dock.noarch'
-      - 'gnome-tweaks'
-      - 'gnome-themes-extra'
-      - 'python3-pip'
-      - 'virt-manager'
-      - 'tuned'
-      - 'ffmpeg'
-      - 'helm'
-      - 'python3-virtualenvwrapper'
-      - 'python3-ansible-lint'
-      - '@KDE Plasma Workspaces'
-    state: present
+ ansible.builtin.yum:
+#    name: 
+     - 'gnome-tweaks'
+     - 'gnome-extensions-app'
+     - 'gnome-shell-extension-apps-menu.noarch'
+     - 'gnome-shell-extension-dash-to-dock.noarch'
+     - 'gnome-tweaks'
+     - 'gnome-themes-extra'
+     - 'python3-pip'
+     - 'virt-manager'
+     - 'tuned'
+     - 'ffmpeg'
+     - 'helm'
+     - 'python3-virtualenvwrapper'
+     - 'python3-ansible-lint'
+     - '@KDE Plasma Workspaces'
+   state: present
 
 - name: enable tuned
-  ansible.builtin.service: 
-    name: tuned
-    state: started
-  notify: tuned-handler
+ ansible.builtin.service: 
+   name: tuned
+   state: started
+ notify: tuned-handler
 
 - name: Remove opensc to get rid of Firefox prompting for password
   ansible.builtin.yum:
@@ -63,7 +63,6 @@
 
 - name: Install rambox
   ansible.builtin.yum:
-    name: "https://github.com/ramboxapp/download/releases/download/v2.1.0/Rambox-2.1.0-linux-x64.rpm"
+    name: "https://github.com/ramboxapp/download/releases/download/v2.1.5/Rambox-2.1.5-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
-

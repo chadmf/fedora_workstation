@@ -1,6 +1,6 @@
 ---
-- name: Add the flathub community.general.flatpak repository remote to the user installation
-  ansible.builtin.shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+#- name: Add the flathub community.general.flatpak repository remote to the user installation
+#  ansible.builtin.shell: flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
     
 - name: Install signal, telegram, zoom, githubcli bluejeans and discord in a loop
   community.general.flatpak:
@@ -14,5 +14,5 @@
       - com.spotify.Client
       - com.slack.Slack
       - io.podman_desktop.PodmanDesktop
-      - com.jetbrains.PyCharm-Community
+      - im.riot.Riot
     state: present
