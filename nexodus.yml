@@ -1,0 +1,7 @@
+---
+- name: Configure nexodus on Fedora Workstation
+  hosts: localhost
+  gather_facts: False
+  become: true
+  roles:
+    - nexodus

@@ -1,0 +1,17 @@
+---
+# tasks file for nexodus
+- name: Configure nexodus repository
+  community.general.copr:
+    state: enabled
+    name: 'russellb/nexodus'
+    chroot: fedora-38-x86_64
+
+- name: Install nexodus
+  ansible.builtin.dnf:
+    name: nexodus
+    state: latest  
+
+- name: Enable nexodus service
+  ansible.builtin.service:
+    name: nexodus
+    state: started
