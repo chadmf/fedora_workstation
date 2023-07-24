@@ -28,6 +28,8 @@
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
       - '@KDE Plasma Workspaces'
+      - 'synergy'
+      - 'kde-l10n-ja.noarch'
     state: present
 
 - name: enable tuned
@@ -63,7 +65,7 @@
 
 - name: Install rambox
   ansible.builtin.yum:
-    name: "https://github.com/ramboxapp/download/releases/download/v2.1.0/Rambox-2.1.0-linux-x64.rpm"
+    name: "https://github.com/ramboxapp/download/releases/download/v2.1.5/Rambox-2.1.5-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
 
