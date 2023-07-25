@@ -30,6 +30,7 @@
       - '@KDE Plasma Workspaces'
       - 'synergy'
       - 'kde-l10n-ja.noarch'
+      - 'chromium'
     state: present
 
 - name: enable tuned
