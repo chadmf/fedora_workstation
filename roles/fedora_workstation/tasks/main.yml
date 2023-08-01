@@ -28,7 +28,6 @@
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
       - '@KDE Plasma Workspaces'
-      - 'synergy'
       - 'kde-l10n-ja.noarch'
       - 'chromium'
     state: present
