@@ -15,4 +15,5 @@
       - com.slack.Slack
       - io.podman_desktop.PodmanDesktop
       - im.riot.Riot
+      - org.openrgb.OpenRGB
     state: present

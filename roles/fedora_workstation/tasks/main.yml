@@ -30,6 +30,7 @@
       - '@KDE Plasma Workspaces'
       - 'kde-l10n-ja.noarch'
       - 'chromium'
+      - 'buildah'
     state: present
 
 - name: enable tuned
