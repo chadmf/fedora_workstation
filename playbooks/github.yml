@@ -1,6 +1,6 @@
 ---
 - name: Configure github-cli Fedora Workstation
-  hosts: localhost
+  hosts: all
   gather_facts: false
   become: true
   roles:

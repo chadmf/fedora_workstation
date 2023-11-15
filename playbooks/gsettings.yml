@@ -1,6 +1,6 @@
 ---
 - name: Configure gsettings to add Japanese keyboard on Fedora Workstation
-  hosts: localhost
+  hosts: all
   gather_facts: False
   become: yes
   roles:

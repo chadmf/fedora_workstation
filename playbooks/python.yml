@@ -1,6 +1,6 @@
 ---
 - name: Configure python modules on Fedora Workstation
-  hosts: localhost
+  hosts: all
   gather_facts: False
   become: no
   roles:

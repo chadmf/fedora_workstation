@@ -1,6 +1,6 @@
 ---
 - name: Configure Openshift client on Fedora Workstation
-  hosts: localhost
+  hosts: all
   gather_facts: False
   become: yes
   roles:
