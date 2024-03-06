@@ -1,16 +1,4 @@
 ---
-- name: Enable the RPM Fusion repository
-  ansible.builtin.yum:
-    name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm"
-    state: present
-    disable_gpg_check: yes
-
-- name: Enable the RPM Fusion repository
-  ansible.builtin.yum:
-    name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm"
-    state: present
-    disable_gpg_check: yes
-
 - name: Install gnome-tweaks, gimp, plank, virt-manager, ffmpeg, helm
   ansible.builtin.yum:
     name: 
@@ -22,22 +10,12 @@
       - 'gnome-themes-extra'
       - 'python3-pip'
       - 'virt-manager'
-      - 'tuned'
-      - 'ffmpeg'
       - 'helm'
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
-      - '@KDE Plasma Workspaces'
       - 'kde-l10n-ja.noarch'
       - 'chromium'
-      - 'buildah'
     state: present
-
-- name: enable tuned
-  ansible.builtin.service: 
-    name: tuned
-    state: started
-  notify: tuned-handler
 
 - name: Remove opensc to get rid of Firefox prompting for password
   ansible.builtin.yum:

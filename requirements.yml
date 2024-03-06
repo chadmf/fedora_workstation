@@ -6,5 +6,5 @@ collections:
 - name: containers.podman
   source: https://galaxy.ansible.com
 
-- name: 'petermosmans.customize-gnome'
+- name: petermosmans.customize-gnome
   source: https://galaxy.ansible.com
