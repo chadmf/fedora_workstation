@@ -11,6 +11,7 @@
       - 'python3-pip'
       - 'virt-manager'
       - 'helm'
+      - 'podman'
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
       - 'kde-l10n-ja.noarch'
