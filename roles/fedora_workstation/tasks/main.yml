@@ -12,10 +12,13 @@
       - 'virt-manager'
       - 'helm'
       - 'podman'
+      - 'podman-compose'
       - 'python3-virtualenvwrapper'
       - 'python3-ansible-lint'
       - 'kde-l10n-ja.noarch'
       - 'chromium'
+      - 'podman-docker'
+      - 'gh'
     state: present
 
 - name: Remove opensc to get rid of Firefox prompting for password
