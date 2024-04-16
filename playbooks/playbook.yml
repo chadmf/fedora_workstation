@@ -6,7 +6,6 @@
   roles:
     - flatpak
     - fedora_workstation
-    - github
     - openshift
     - python
     - yubi_u2f
