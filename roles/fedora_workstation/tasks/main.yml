@@ -52,3 +52,8 @@
     name: "https://github.com/ramboxapp/download/releases/download/v2.3.1/Rambox-2.3.1-linux-x64.rpm"
     state: latest 
     disable_gpg_check: true
+
+- name: Set timezone 
+  community.general.timezone:
+    name: America/Chicago
+    hwclock: "local"
