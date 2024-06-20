@@ -16,4 +16,4 @@
 - name: Install vscode
   ansible.builtin.yum:
     name: 'code'
-    state: present
+    state: latest
