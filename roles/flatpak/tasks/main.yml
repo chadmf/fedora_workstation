@@ -9,7 +9,6 @@
       - org.telegram.desktop
       - us.zoom.Zoom
       - io.github.shiftey.Desktop
-      - com.bluejeans.BlueJeans
       - com.discordapp.Discord
       - com.spotify.Client
       - com.slack.Slack
