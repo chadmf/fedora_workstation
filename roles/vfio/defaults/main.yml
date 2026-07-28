@@ -6,6 +6,5 @@
 vfio_pci_ids:
   - 10de:249d
   - 10de:228b
-
 # Automatically reboot if adding new devices?
-auto_reboot: no
+auto_reboot: false
