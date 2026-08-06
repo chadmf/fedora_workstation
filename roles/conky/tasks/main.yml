@@ -1,15 +1,15 @@
 ---
-- name: Install conky and other prerequisites 
+- name: Install conky and other prerequisites
   ansible.builtin.yum:
-    name: 
-      -  'conky'
-      -  'vim-common'
-      -  'redhat-lsb-core'
+    name:
+      - conky
+      - vim-common
+      - redhat-lsb-core
 
-- name: copy conky config file
+- name: Copy conky config file
   ansible.builtin.copy:
     src: files/conky.conf
-    dest: '/home/{{ local_user_name }}/.conkyrc'
-    owner: '{{ local_user_name }}'
-    group: '{{ local_user_name }}'
-    mode: 0775
+    dest: /home/{{ local_user_name }}/.conkyrc
+    owner: "{{ local_user_name }}"
+    group: "{{ local_user_name }}"
+    mode: "0775"

@@ -1,25 +1,25 @@
 ---
 - name: Install gnome-tweaks, gimp, plank, virt-manager, ffmpeg, helm
   ansible.builtin.yum:
-    name: 
-      - 'gnome-tweaks'
-      - 'gnome-extensions-app'
-      - 'gnome-shell-extension-apps-menu.noarch'
-      - 'gnome-shell-extension-dash-to-dock.noarch'
-      - 'gnome-tweaks'
-      - 'gnome-themes-extra'
-      - 'python3-pip'
-      - 'virt-manager'
-      - 'helm'
-      - 'podman'
-      - 'podman-compose'
-      - 'python3-virtualenvwrapper'
-      - 'python3-ansible-lint'
-      - 'kde-l10n-ja.noarch'
-      - 'chromium'
-      - 'podman-docker'
-      - 'gh'
-      - 'the_silver_searcher'
+    name:
+      - gnome-tweaks
+      - gnome-extensions-app
+      - gnome-shell-extension-apps-menu.noarch
+      - gnome-shell-extension-dash-to-dock.noarch
+      - gnome-tweaks
+      - gnome-themes-extra
+      - python3-pip
+      - virt-manager
+      - helm
+      - podman
+      - podman-compose
+      - python3-virtualenvwrapper
+      - python3-ansible-lint
+      - kde-l10n-ja.noarch
+      - chromium
+      - podman-docker
+      - gh
+      - the_silver_searcher
     state: present
 
 - name: Remove opensc to get rid of Firefox prompting for password
@@ -32,7 +32,7 @@
     key: https://dl.google.com/linux/linux_signing_key.pub
     state: present
 
-- name: Add google-chrome repository 
+- name: Add google-chrome repository
   ansible.builtin.yum_repository:
     name: google-chrome
     description: google-chrome repository
@@ -43,23 +43,23 @@
 
 - name: Install google-chrome-stable
   ansible.builtin.yum:
-    name: "google-chrome-stable"
-    state: latest 
+    name: google-chrome-stable
+    state: present
     update_cache: true
 
 - name: Install rambox
   ansible.builtin.yum:
-    name: "https://rambox.app/api/download?os=linux&package=rpm"
-    state: latest 
+    name: https://rambox.app/api/download?os=linux&package=rpm
+    state: present
     disable_gpg_check: true
 
-- name: Set timezone 
+- name: Set timezone
   community.general.timezone:
     name: America/Chicago
-    hwclock: "local"
+    hwclock: local
 
 - name: Install appimage launcher
   ansible.builtin.yum:
-    name: "https://github.com/TheAssassin/AppImageLauncher/releases/download/continuous/appimagelauncher-2.2.0-gha111.d9d4c73.x86_64.rpm"
-    state: latest 
+    name: https://github.com/TheAssassin/AppImageLauncher/releases/download/continuous/appimagelauncher-2.2.0-gha111.d9d4c73.x86_64.rpm
+    state: present
     disable_gpg_check: true
