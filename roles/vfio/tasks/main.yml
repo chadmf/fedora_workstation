@@ -1,39 +1,43 @@
 ---
 - name: Check successful CPU detection
-  debug:
+  ansible.builtin.debug:
     msg: CPU detected as {{ cpu_vendor }}
   failed_when:
     - cpu_vendor != 'amd'
     - cpu_vendor != 'intel'
 
 - name: Copy config to /etc/modules-load.d/
-  copy:
+  ansible.builtin.copy:
     src: etc/modules-load.d/vfio.conf
     dest: /etc/modules-load.d/vfio.conf
+    mode: "0644"
   notify:
     - rebuild initrd
 
 - name: Copy config to /etc/modprobe.d/
-  template:
+  ansible.builtin.template:
     src: etc/modprobe.d/vfio.conf.j2
     dest: /etc/modprobe.d/vfio.conf
+    mode: "0644"
   notify:
     - rebuild initrd
     - reboot
 
 - name: Copy config to /etc/dracut.conf.d/
-  template:
+  ansible.builtin.template:
     src: etc/dracut.conf.d/vfio.conf.j2
     dest: /etc/dracut.conf.d/vfio.conf
+    mode: "0644"
   notify:
     - rebuild initrd
 
 - name: Check GRUB defaults and enable IOMMU if necessary
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/default/grub
     backrefs: true
-    regexp: '^(GRUB_CMDLINE_LINUX=(?!.*{{ iommu_kernel_cmds }})\"[^\"]+)(\")'
-    line: '\1 {{ iommu_kernel_cmds }}\2'
+    regexp: ^(GRUB_CMDLINE_LINUX=(?!.*{{ iommu_kernel_cmds }})\"[^\"]+)(\")
+    line: \1 {{ iommu_kernel_cmds }}\2
+    mode: "0644"
   notify:
     - generate grub config
     - rebuild initrd
