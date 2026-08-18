@@ -1,10 +1,11 @@
 ---
 # tasks file for nvidia
+
 - name: Install nvidia proprietary drivers from rpm fusion
   ansible.builtin.yum:
-    name: 
-      - 'akmod-nvidia'
-      - 'xorg-x11-drv-nvidia-cuda'
+    name:
+      - akmod-nvidia
+      - xorg-x11-drv-nvidia-cuda
     state: present
 
 - name: Blacklist the nouveau driver module

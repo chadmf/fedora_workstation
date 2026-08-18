@@ -1,8 +1,7 @@
 ---
 - name: Configure conky for Fedora Workstation
   hosts: localhost
-  gather_facts: True
-  become: yes
+  become: true
+  gather_facts: true
   roles:
     - vfio
-
