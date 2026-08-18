@@ -1,10 +1,14 @@
 ---
-- name: generate grub config
-  command: grub2-mkconfig -o /boot/efi/EFI/{{ ansible_facts['distribution'] | lower }}/grub.cfg
+- name: Generate grub config
+  ansible.builtin.command:
+    cmd: grub2-mkconfig -o /boot/efi/EFI/{{ ansible_facts['distribution'] | lower }}/grub.cfg
+  changed_when: false
 
-- name: rebuild initrd
-  command: dracut -f
+- name: Rebuild initrd
+  ansible.builtin.command:
+    cmd: dracut -f
+  changed_when: false
 
-- name: reboot
-  reboot:
+- name: Reboot
+  ansible.builtin.reboot:
   when: auto_reboot
