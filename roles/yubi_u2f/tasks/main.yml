@@ -3,9 +3,9 @@
 
 - name: Install yubi utils
   ansible.builtin.yum:
-    name: 
-      -  'pamu2fcfg'
-      -  'pam-u2f'
+    name:
+      - pamu2fcfg
+      - pam-u2f
     state: present
 
 - name: Check that the yubi mappings file exists
@@ -17,14 +17,15 @@
   ansible.builtin.file:
     path: /etc/yubikey_mappings
     state: touch
+    mode: "0644"
   when: not stat_result.stat.exists
 
-- name: create pam.d rule
+- name: Create pam.d rule
   ansible.builtin.pamd:
     name: gdm-password
     type: auth
     control: required
     module_path: pam_u2f.so
     new_control: sufficient
-    module_arguments: 'authfile=/etc/yubikey_mappings'
-    backup: 'yes'
+    module_arguments: authfile=/etc/yubikey_mappings
+    backup: "yes"
