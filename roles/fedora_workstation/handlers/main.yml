@@ -1,3 +1,5 @@
 ---
-- name: tuned-handler
-  shell: tuned-adm profile powersave
+- name: Tuned-handler
+  ansible.builtin.command:
+    cmd: tuned-adm profile powersave
+  changed_when: false
