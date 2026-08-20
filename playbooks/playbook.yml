@@ -1,8 +1,8 @@
 ---
 - name: Configure Fedora Workstation
   hosts: localhost
-  gather_facts: False
-  become: True
+  become: true
+  gather_facts: false
   roles:
     - flatpak
     - fedora_workstation
@@ -10,5 +10,3 @@
     - python
     - yubi_u2f
     - vscode
-
-

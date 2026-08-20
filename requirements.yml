@@ -1,10 +1,8 @@
 ---
 collections:
-- name: community.general
-  source: https://galaxy.ansible.com
-
-- name: containers.podman
-  source: https://galaxy.ansible.com
-
-- name: petermosmans.customize-gnome
-  source: https://galaxy.ansible.com
+  - name: community.general
+    source: https://galaxy.ansible.com
+  - name: containers.podman
+    source: https://galaxy.ansible.com
+  - name: petermosmans.customize-gnome
+    source: https://galaxy.ansible.com

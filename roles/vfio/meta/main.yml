@@ -3,8 +3,7 @@ galaxy_info:
   author: Stephen Panicho
   description: Enables IOMMU and configures vfio-pci on RHEL/CentOS/Fedora.
   license: MIT
-  min_ansible_version: 2.3
-
+  min_ansible_version: 2.14.0
   platforms:
     - name: EL
       versions:
@@ -12,7 +11,6 @@ galaxy_info:
     - name: Fedora
       versions:
         - all
-
   galaxy_tags:
     - system
     - hardware
